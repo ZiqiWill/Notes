@@ -46,17 +46,37 @@
 - Tests标签页右侧snippets栏，里面是postman内置的测试脚本，辅助对接口进行测试。
 - 对于自动化测试，必须要设置Test脚本，不然即使run也没有意义。
 
-> 示例1：验证status
+> 示例1：验证Http Status
 
 `tests["Status code is 200"] = responseCode.code === 200; //测试http状态码是否是200 `
 
 `tests['Response time is less than 500ms'] = responseTime < 500; //测试响应时间是否小于500毫秒 `
 
 
-> 示例2：验证JSON格式
-> - 使用JSON Schema
+> 示例2：使用JSON Schema 验证JSON格式
 > 
 > **关于 JSON Schema**
 > - JSON Schema 是一种用于验证JSON格式的语法规则。
-> - [JSONSchema.net](https://jsonschema.net/#/) 在线生成JSON Schema的网页,输入期望的JSON数据，自动根据JSON数据格式分析出对应的JSON Schema。
-	
+> - [JSONSchema.net](https://jsonschema.net/#/) 在线生成JSON Schema的网页,输入期望的JSON数据，根据JSON数据，自动分析格式，并生成出对应的JSON Schema。
+> 
+> - JSON Schema 示例1:
+> 
+```javascript
+var data1 = [true, false];
+var data2 = [true, 123];
+var schema = {
+  "items": {
+    "type": "boolean"
+  }
+};
+pm.test('data1 is valid', function() {
+  pm.expect(tv4.validate(data1, schema)).to.be.true;
+});
+
+pm.test('data2 is valid', function() {
+  pm.expect(tv4.validate(data2, schema)).to.be.true;
+});
+
+```
+
+
