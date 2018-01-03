@@ -39,6 +39,6 @@
 - Runner运行时可以使用外部CSV文件，或者JSON文件来指定数据，实现数据驱动测试。
 > 例如：新建一个JSON文件如下图所示。
 > 
-> ![PostManJSON文件截图](https://cnportal.avepoint.net/my/personal/avepoint_ziqi_wang/SiteCollectionDocuments/PostMan%E6%88%AA%E5%9B%BE/PostManJSON.png)
-![外部变量截图](https://cnportal.avepoint.net/my/personal/avepoint_ziqi_wang/SiteCollectionDocuments/PostMan%E6%88%AA%E5%9B%BE/1-3-2018%202-16-13%20PM.png)
+> ![PostManJSON文件截图](https://www.z4a.net/images/2018/01/03/PostManJSON.png)
+![PostURL.png](https://www.z4a.net/images/2018/01/03/PostURL.png)
 请求中变量{{cityID}}，用来获取上述JSON文件中的数据，{{ }}中的名字对应json文件的key，或者scv文件的第一行。
