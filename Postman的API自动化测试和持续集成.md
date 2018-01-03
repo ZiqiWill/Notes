@@ -25,8 +25,8 @@
 - [Newmen](https://www.npmjs.com/package/newman)是一个命令行工具，可以让POSTman测试添加到持续集成系统中。
 
 
-## 3. Runner和外部数据
-- PostMan自带Runner功能，用于批量运行脚本，也就是可以运行整个Collection。
+## 3. Collection Runner和外部数据
+- Collection Runner功能，用于批量运行脚本，即可以运行整个Collection并查看结果。
 - Runner运行时可以使用外部CSV文件，或者JSON文件来指定数据，实现数据驱动测试。
 > 示例：
 > 
@@ -135,4 +135,89 @@ pm.test('Schema_test is valid', function() {
 ![result2.png](https://www.z4a.net/images/2018/01/03/result2.png)
 
 
+### 3. 运行Runner执行自动化测试
+> 截止到这里，进行自动化的准备步骤已经准备完毕。
+> 
+> 简要步骤：
+>  1. 配置一个Http请求，Save到Collection中。
+>  2. 在Test选项卡中添加Test脚本。
+>  3. 配置Collection Runner需要的数据
+>  4. 使用Runner 运行Collecton
 
+> 以下是一个完整的Tests用例和测试结果：
+
+
+```javascript
+tests["Case1: Status code is 200"] = responseCode.code === 200;
+
+var jsonData = JSON.parse(responseBody);
+tests["Case2: Api status is OK"] = jsonData.desc === 'OK';
+
+var schema = 
+{
+    "type": "object", 
+    "properties":
+    {
+        "desc": {
+            "type":"string"},
+        "status":{
+            "type":"integer"},
+        "data":{
+            "type": "object", 
+            "properties": {
+                 "city": {
+                     "type": "string" },
+                 "aqi": {
+                     "type": "string"},
+                 "ganmao": {
+                     "type": "string"},
+                 "wendu": {
+                     "type": "string" },
+                 "yesterday": {
+                     "type": "object", 
+                     "properties": {
+                         "date": {
+                             "type": "string" },
+                         "high": {
+                              "type": "string"},
+                         "low": {
+                              "type": "string"}
+                     	}
+                 },
+                 "forecast": {
+                     "type": "array", 
+                     "items": {
+                         "type": "object", 
+                         "properties": {
+                             "date": {
+                                 "type": "string"},
+                             "high": {
+                                 "type": "string"},
+                             "fengli": {
+                                 "type": "string"}
+                         }
+                     }
+                 }
+            }
+        }
+    }
+};
+
+var result = tv4.validateResult(jsonData, schema);
+tests["Case3: Valid schema"] = result.valid; 
+
+var city = pm.variables.get("cityID");
+if(city === 101010100)
+{
+    tests["Case4: City is BJ"] = jsonData.data.city === pm.globals.get("cityName_BJ");
+}
+if(city === 101060101)
+{
+    tests["Case4: City is CC"] = jsonData.data.city === pm.globals.get("cityName_CC");
+}
+
+```
+> 测试结果：
+> 根据数据驱动测试，测试进行了2轮，每轮测试4条Case，所以总计PASSED 8条，FAILED 0条
+
+![results3.png](https://www.z4a.net/images/2018/01/03/results3.png)
