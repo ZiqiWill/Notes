@@ -44,7 +44,11 @@
 >  ![PostManJSON文件截图](https://www.z4a.net/images/2018/01/03/PostManJSON.png)
 >  
 >  2. 在请求中配置变量。
->  
 >  请求中变量{{cityID}}，用来获取上述JSON文件中的数据，{{ }}中的名字对应json文件的key，或者scv文件的第一行。
 >  ![PostURL.png](https://www.z4a.net/images/2018/01/03/PostURL.png)
+>  
+>  3. 启动Collection Runner 
+>  **注意**：Iterations 表示迭代几次，因为例子中只有两条数据，所以填写2。Delay表示每次之间间隔1000毫秒。
+>  
+>  ![CollectionRunner.png](https://www.z4a.net/images/2018/01/03/CollectionRunner.png)
 
