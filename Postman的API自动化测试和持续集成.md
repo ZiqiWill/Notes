@@ -53,8 +53,12 @@
 > 示例1：
 > 
 > tests["Status code is 200"] = responseCode.code === 200; 
-> *测试responseCode，也就是测试http状态码是否是200*
+>
+>  *测试responseCode，也就是测试http状态码是否是200*
+
 > tests['Response time is less than 500ms'] = responseTime < 500;
+>
 > *测试响应时间是否小于500毫秒*
+> 
 > 示例2：
 > 
