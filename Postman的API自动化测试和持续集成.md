@@ -84,6 +84,7 @@ pm.test('data2 is valid', function() {
 > 测试结果如下图所示：
 > 
 > data1是一个boolean类型的数组，显然，data1的数据格式是符合schema定义的，所以测试结果应该是PASS。
+> 
 > data2是一个string和int的混合的数组，显然不符合schema定义，所以测试结果是FAIL。
 > 
 > ![schemaTestResult1.png](https://www.z4a.net/images/2018/01/03/schemaTestResult1.png)
@@ -95,21 +96,35 @@ var test_data = {
     "city":"BeiJing", 
     "api": true,
     "status":200,
-};
+    "forecast":[
+        {"date":"Jan-3","high":3,'low':1},
+        {"date":"Jan-4","high":4,'low':0}]
+	};
+
 var test_schema = {
-      "type": "object", 
-      "properties":{
-          "city": {
-              "type": "string"
-          },
-          "api": {
-              "type": "boolean"
-          },
-          "status": {
-              "type": "integer"
-          }
-      }
-};
+    "type": "object", 
+    "properties":{
+      "city": {
+        "type": "string"},
+      "api":{
+          "type": "boolean"},
+      "status":{
+          "type": "integer"},
+      "forecast":{
+          "type": "array", 
+          "items": {
+              "type": "object", 
+              "properties":{
+                  "date":{
+                      "type": "string"},
+                  "high":{
+                      "type": "integer"},
+                  "low":{
+                      "type":"integer"}}
+          		}
+      		}
+    	}
+	};
 
 pm.test('Schema_test is valid', function() {
   pm.expect(tv4.validate(test_data, test_schema)).to.be.true;
