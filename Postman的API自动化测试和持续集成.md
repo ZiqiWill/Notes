@@ -47,7 +47,7 @@
 - 对于自动化测试，必须要设置Test脚本，不然即使run也没有意义。
 
 
-1. 验证Http Status
+### 1. 验证Http Status
 
 `tests["Status code is 200"] = responseCode.code === 200; //测试http状态码是否是200 `
 
@@ -56,7 +56,7 @@
 
 
 
-2. 使用JSON Schema 验证JSON格式
+### 2. 使用JSON Schema 验证JSON格式
 > 
 > **关于 JSON Schema**
 > - JSON Schema 是一种用于验证JSON格式的语法规则。
@@ -81,5 +81,7 @@ pm.test('data2 is valid', function() {
 });
 
 ```
+> 测试结果如下图所示：
+> ![schemaTestResult1.png](https://www.z4a.net/images/2018/01/03/schemaTestResult1.png)
 
 
