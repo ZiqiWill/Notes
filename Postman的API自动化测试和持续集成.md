@@ -132,3 +132,7 @@ pm.test('Schema_test is valid', function() {
 ```
 > 测试结果：
 > 
+![result2.png](https://www.z4a.net/images/2018/01/03/result2.png)
+
+
+
