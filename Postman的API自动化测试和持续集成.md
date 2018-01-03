@@ -58,5 +58,4 @@
 
 
 > 示例2：验证JSON格式
-> 
 > 使用JSON Schema
