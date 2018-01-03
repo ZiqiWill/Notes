@@ -2,15 +2,18 @@
 
 >参考文章：
 >
->- [基于Postman的API自动化测试](https://segmentfault.com/a/1190000005055899)
->
+> - [【基于Postman的API自动化测试】](https://segmentfault.com/a/1190000005055899)
+> - [【接口自动化之Postman+Newman】](http://www.cnblogs.com/zuoshaowei/p/6192863.html)
+> - [【使用postman作为rest api自动化测试工具】](https://segmentfault.com/a/1190000008279947)
 
 ----------
 
 
 ## 1. 关于API测试
-- Postman测试沙箱 是一个JavaScript执行环境，可以通过JS脚本来编写pre-requist和测试脚本。pre-requist可以用来修改一些默认参数。
-- Postman沙箱集成了几个工具库，比如lodash、SugarJs、tv4，还有一些内置函数如xml2JSON。
+- PostMan测试沙箱 是一个JavaScript执行环境，可以通过JS脚本来编写pre-requist和测试脚本。
+- Postman最基础的功能就是发送http请求。填写URL、Params、header、body等就可以发送一个请求，可以满足一些简单的测试需求。
+- 如果应用需要用到登录验证，可以通过Authorization可以满足需求。
+- 另外，PostMan沙箱集成了几个工具库，比如lodash、SugarJs、tv4，还有一些内置函数如xml2JSON。
 > [tv4](https://github.com/geraintluff/tv4)是POSTMan集成的一个工具库，通过编写JSON Schema，用来验证JSON数据是否符合一定格式，JSON Schema的语法请[参照这里](http://json-schema.org/example1.html)
 
 ## 2. 关于JSON Schema
@@ -24,3 +27,8 @@
 - 每个请求看成一个Test Case，那么Collection则可以看成一个Test Suite
 - 每个Collection都有一个URL，通过Share可以分享集合，或者用于[Newmen](https://www.npmjs.com/package/newman)执行。
 - [Newmen](https://www.npmjs.com/package/newman)是一个命令行工具，可以让POSTman测试添加到持续集成系统中。
+
+
+## 4. 测试（Tests）
+- 在Tests标签页里面，支持用户使用JS编写自己的测试脚本。
+- Tests标签页右侧snippets栏，里面是postman内置的测试脚本，辅助对接口进行测试。
