@@ -39,8 +39,7 @@
 - Runner运行时可以使用外部CSV文件，或者JSON文件来指定数据，实现数据驱动测试。
 > 示例：
 > 
->  1. 新建一个JSON文件如下图所示。
->  
+>  1. 新建一个JSON文件如下图所示。  
 >  ![PostManJSON文件截图](https://www.z4a.net/images/2018/01/03/PostManJSON.png)
 >  
 >  2. 在请求中配置变量。
@@ -48,7 +47,7 @@
 >  ![PostURL.png](https://www.z4a.net/images/2018/01/03/PostURL.png)
 >  
 >  3. 启动Collection Runner 
->  **注意**：Iterations 表示迭代几次，因为例子中只有两条数据，所以填写2。Delay表示每次之间间隔1000毫秒。
 >  
+>  **注意**：Iterations 表示迭代几次，因为例子中只有两条数据，所以填写2。Delay表示每次之间间隔1000毫秒。
 >  ![CollectionRunner.png](https://www.z4a.net/images/2018/01/03/CollectionRunner.png)
 
