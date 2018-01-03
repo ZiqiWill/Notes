@@ -82,6 +82,10 @@ pm.test('data2 is valid', function() {
 
 ```
 > 测试结果如下图所示：
+> 
+> data1是一个boolean类型的数组，显然，data1的数据格式是符合schema定义的，所以测试结果应该是PASS。
+> data2是一个string和int的混合的数组，显然不符合schema定义，所以测试结果是FAIL。
+> 
 > ![schemaTestResult1.png](https://www.z4a.net/images/2018/01/03/schemaTestResult1.png)
 
 - JSON Schema 示例2:
@@ -110,5 +114,6 @@ var test_schema = {
 pm.test('Schema_test is valid', function() {
   pm.expect(tv4.validate(test_data, test_schema)).to.be.true;
 });
-
 ```
+> 测试结果：
+> 
