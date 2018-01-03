@@ -99,7 +99,7 @@ var test_data = {
     "forecast":[
         {"date":"Jan-3","high":3,'low':1},
         {"date":"Jan-4","high":4,'low':0}]
-	};
+};
 
 var test_schema = {
     "type": "object", 
@@ -124,7 +124,7 @@ var test_schema = {
           		}
       		}
     	}
-	};
+};
 
 pm.test('Schema_test is valid', function() {
   pm.expect(tv4.validate(test_data, test_schema)).to.be.true;
