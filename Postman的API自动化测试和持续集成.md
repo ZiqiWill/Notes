@@ -29,12 +29,7 @@
 - [Newmen](https://www.npmjs.com/package/newman)是一个命令行工具，可以让POSTman测试添加到持续集成系统中。
 
 
-## 4. 测试（Tests）
-- 在Tests标签页里面，支持用户使用JS编写自己的测试脚本。
-- Tests标签页右侧snippets栏，里面是postman内置的测试脚本，辅助对接口进行测试。
-
-
-## 5. Runner和外部数据
+## 4. Runner和外部数据
 - PostMan自带Runner功能，用于批量运行脚本，也就是可以运行整个Collection。
 - Runner运行时可以使用外部CSV文件，或者JSON文件来指定数据，实现数据驱动测试。
 > 示例：
@@ -50,3 +45,9 @@
 >  **注意**：Iterations 表示迭代几次，因为例子中只有两条数据，所以填写2。Delay表示每次之间间隔1000毫秒。
 >  ![CollectionRunner.png](https://www.z4a.net/images/2018/01/03/CollectionRunner.png)
 
+##  5. 测试（Tests）
+- 在Tests标签页里面，支持用户使用JS编写自己的测试脚本。
+- Tests标签页右侧snippets栏，里面是postman内置的测试脚本，辅助对接口进行测试。
+> 示例1：
+> tests["Status code is 200"] = responseCode.code === 200; 
+> tests['Response time is less than 500ms'] = responseTime < 500;
