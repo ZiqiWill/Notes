@@ -32,3 +32,8 @@
 ## 4. 测试（Tests）
 - 在Tests标签页里面，支持用户使用JS编写自己的测试脚本。
 - Tests标签页右侧snippets栏，里面是postman内置的测试脚本，辅助对接口进行测试。
+
+
+## 5. Runner和外部数据
+- PostMan自带Runner功能，用于批量运行脚本，也就是可以运行整个Collection。
+- Runner运行时可以使用外部CSV文件，或者JSON文件来指定数据，实现数据驱动测试。
