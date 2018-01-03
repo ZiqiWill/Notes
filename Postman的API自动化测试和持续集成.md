@@ -10,9 +10,9 @@
 
 
 ## 1. 关于API测试
+- PostMan最基础的功能就是发送http请求。填写URL、Params、header、body等就可以发送一个请求，可以满足一些简单的测试需求。
 - PostMan测试沙箱 是一个JavaScript执行环境，可以通过JS脚本来编写pre-requist和测试脚本。
-- Postman最基础的功能就是发送http请求。填写URL、Params、header、body等就可以发送一个请求，可以满足一些简单的测试需求。
-- 如果应用需要用到登录验证，可以通过Authorization可以满足需求。
+- 如果需要登录验证，可以通过Authorization满足需求。
 - 另外，PostMan沙箱集成了几个工具库，比如lodash、SugarJs、tv4，还有一些内置函数如xml2JSON。
 > [tv4](https://github.com/geraintluff/tv4)是POSTMan集成的一个工具库，通过编写JSON Schema，用来验证JSON数据是否符合一定格式，JSON Schema的语法请[参照这里](http://json-schema.org/example1.html)
 
@@ -37,3 +37,8 @@
 ## 5. Runner和外部数据
 - PostMan自带Runner功能，用于批量运行脚本，也就是可以运行整个Collection。
 - Runner运行时可以使用外部CSV文件，或者JSON文件来指定数据，实现数据驱动测试。
+> 例如：新建一个JSON文件如下图所示。
+> 
+> ![PostManJSON文件截图](https://cnportal.avepoint.net/my/personal/avepoint_ziqi_wang/SiteCollectionDocuments/PostMan%E6%88%AA%E5%9B%BE/PostManJSON.png)
+![外部变量截图](https://cnportal.avepoint.net/my/personal/avepoint_ziqi_wang/SiteCollectionDocuments/PostMan%E6%88%AA%E5%9B%BE/1-3-2018%202-16-13%20PM.png)
+请求中变量{{cityID}}，用来获取上述JSON文件中的数据，{{ }}中的名字对应json文件的key，或者scv文件的第一行。
