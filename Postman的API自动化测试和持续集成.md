@@ -45,15 +45,16 @@
 >  **注意**：Iterations 表示迭代几次，因为例子中只有两条数据，所以填写2。Delay表示每次之间间隔1000毫秒。
 >  ![CollectionRunner.png](https://www.z4a.net/images/2018/01/03/CollectionRunner.png)
 
-##  5. 测试（Tests）
+##  5. 测试（Tests）和自动化
 - 在Tests标签页里面，支持用户使用JS编写自己的测试脚本。
 - Tests标签页右侧snippets栏，里面是postman内置的测试脚本，辅助对接口进行测试。
+- 对于自动化测试，必须要设置Test脚本，不然即使run也没有意义。
 
 > 示例1：
 > 
 > tests["Status code is 200"] = responseCode.code === 200; 
-> 
+> *测试responseCode，也就是测试http状态码是否是200*
 > tests['Response time is less than 500ms'] = responseTime < 500;
-> 
+> *测试响应时间是否小于500毫秒*
 > 示例2：
 > 
