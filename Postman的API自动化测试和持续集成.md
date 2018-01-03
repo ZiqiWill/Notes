@@ -48,6 +48,12 @@
 ##  5. 测试（Tests）
 - 在Tests标签页里面，支持用户使用JS编写自己的测试脚本。
 - Tests标签页右侧snippets栏，里面是postman内置的测试脚本，辅助对接口进行测试。
+
 > 示例1：
+> 
 > tests["Status code is 200"] = responseCode.code === 200; 
+> 
 > tests['Response time is less than 500ms'] = responseTime < 500;
+> 
+> 示例2：
+> 
