@@ -6,7 +6,7 @@
 >
 
 
-##1. Collection
+## 1. Collection
 - 每个请求都可以保存到一个Collection中。
 - 集合不单可以保存和分类，还支持一建运行整个集合内的测试
 - 每个请求看成一个Test Case，那么Collection则可以看成一个Test Suite
