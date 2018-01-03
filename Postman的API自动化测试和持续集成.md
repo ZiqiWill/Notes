@@ -46,14 +46,17 @@
 - Tests标签页右侧snippets栏，里面是postman内置的测试脚本，辅助对接口进行测试。
 - 对于自动化测试，必须要设置Test脚本，不然即使run也没有意义。
 
-> 示例1：验证Http Status
+
+1. 验证Http Status
 
 `tests["Status code is 200"] = responseCode.code === 200; //测试http状态码是否是200 `
 
 `tests['Response time is less than 500ms'] = responseTime < 500; //测试响应时间是否小于500毫秒 `
 
 
-> 示例2：使用JSON Schema 验证JSON格式
+
+
+2. 使用JSON Schema 验证JSON格式
 > 
 > **关于 JSON Schema**
 > - JSON Schema 是一种用于验证JSON格式的语法规则。
@@ -63,7 +66,7 @@
 > 
 ```javascript
 var data1 = [true, false];
-var data2 = [true, 123];
+var data2 = ['a string', 123];
 var schema = {
   "items": {
     "type": "boolean"
