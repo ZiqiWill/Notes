@@ -62,8 +62,8 @@
 > - JSON Schema 是一种用于验证JSON格式的语法规则。
 > - [JSONSchema.net](https://jsonschema.net/#/) 在线生成JSON Schema的网页,输入期望的JSON数据，根据JSON数据，自动分析格式，并生成出对应的JSON Schema。
 > 
-> - JSON Schema 示例1:
-> 
+- JSON Schema 示例1:
+
 ```javascript
 var data1 = [true, false];
 var data2 = ['a string', 123];
@@ -84,4 +84,31 @@ pm.test('data2 is valid', function() {
 > 测试结果如下图所示：
 > ![schemaTestResult1.png](https://www.z4a.net/images/2018/01/03/schemaTestResult1.png)
 
+- JSON Schema 示例2:
 
+```javascript
+var test_data = {
+    "city":"BeiJing", 
+    "api": true,
+    "status":200,
+};
+var test_schema = {
+      "type": "object", 
+      "properties":{
+          "city": {
+              "type": "string"
+          },
+          "api": {
+              "type": "boolean"
+          },
+          "status": {
+              "type": "integer"
+          }
+      }
+};
+
+pm.test('Schema_test is valid', function() {
+  pm.expect(tv4.validate(test_data, test_schema)).to.be.true;
+});
+
+```
