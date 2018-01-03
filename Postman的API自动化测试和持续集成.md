@@ -37,8 +37,14 @@
 ## 5. Runner和外部数据
 - PostMan自带Runner功能，用于批量运行脚本，也就是可以运行整个Collection。
 - Runner运行时可以使用外部CSV文件，或者JSON文件来指定数据，实现数据驱动测试。
-> 例如：新建一个JSON文件如下图所示。
+> 示例：
 > 
-> ![PostManJSON文件截图](https://www.z4a.net/images/2018/01/03/PostManJSON.png)
-![PostURL.png](https://www.z4a.net/images/2018/01/03/PostURL.png)
-请求中变量{{cityID}}，用来获取上述JSON文件中的数据，{{ }}中的名字对应json文件的key，或者scv文件的第一行。
+>  1. 新建一个JSON文件如下图所示。
+>  
+>  ![PostManJSON文件截图](https://www.z4a.net/images/2018/01/03/PostManJSON.png)
+>  
+>  2. 在请求中配置变量。
+>  
+>  请求中变量{{cityID}}，用来获取上述JSON文件中的数据，{{ }}中的名字对应json文件的key，或者scv文件的第一行。
+>  ![PostURL.png](https://www.z4a.net/images/2018/01/03/PostURL.png)
+
