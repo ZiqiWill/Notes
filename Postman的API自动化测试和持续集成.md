@@ -51,10 +51,10 @@
 - 对于自动化测试，必须要设置Test脚本，不然即使run也没有意义。
 
 > 示例1：
-    
-`tests["Status code is 200"] = responseCode.code === 200; *//测试http状态码是否是200* `
-`tests['Response time is less than 500ms'] = responseTime < 500;`
-*测试响应时间是否小于500毫秒*
+
+`tests["Status code is 200"] = responseCode.code === 200; //测试http状态码是否是200 `
+
+`tests['Response time is less than 500ms'] = responseTime < 500; //测试响应时间是否小于500毫秒 `
 
 
 > 示例2：
