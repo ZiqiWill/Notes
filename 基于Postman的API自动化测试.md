@@ -14,4 +14,9 @@
 - [Newmen](https://www.npmjs.com/package/newman)是一个命令行工具，可以让POSTman测试添加到持续集成系统中。
 
 
-2. 
+## 2. 关于API测试
+- Postman测试沙箱 是一个JavaScript执行环境，可以通过JS脚本来编写pre-requist和测试脚本。pre-requist可以用来修改一些默认参数。
+- Postman沙箱集成了几个工具库，比如lodash、SugarJs、tv4，还有一些内置函数如xml2JSON。
+> - [tv4](https://github.com/geraintluff/tv4)用于验证JSON数据，通过编写JSON Schema来验证，JSON Schema的语法请[参照这里](http://json-schema.org/example1.html)
+
+## 3. 关于JSON Schema
