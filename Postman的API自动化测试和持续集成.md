@@ -50,11 +50,13 @@
 - Tests标签页右侧snippets栏，里面是postman内置的测试脚本，辅助对接口进行测试。
 - 对于自动化测试，必须要设置Test脚本，不然即使run也没有意义。
 
-> 示例1：
+> 示例1：验证status
 
 `tests["Status code is 200"] = responseCode.code === 200; //测试http状态码是否是200 `
 
 `tests['Response time is less than 500ms'] = responseTime < 500; //测试响应时间是否小于500毫秒 `
 
 
-> 示例2：
+> 示例2：验证JSON格式
+> 
+> 使用JSON Schema
