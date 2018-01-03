@@ -16,12 +16,8 @@
 - 另外，PostMan沙箱集成了几个工具库，比如lodash、SugarJs、tv4，还有一些内置函数如xml2JSON。
 > [tv4](https://github.com/geraintluff/tv4)是POSTMan集成的一个工具库，通过编写JSON Schema，用来验证JSON数据是否符合一定格式，JSON Schema的语法请[参照这里](http://json-schema.org/example1.html)
 
-## 2. 关于JSON Schema
-- JSON Schema 是一种用于验证JSON格式的语法规则。
-- [JSONSchema.net](https://jsonschema.net/#/) 在线生成JSON Schema的网页,输入期望的JSON数据，自动根据JSON数据格式分析出对应的JSON Schema。
 
-
-## 3. Collection
+## 2. Collection
 - 每个请求都可以保存到一个Collection中。
 - 集合不单可以保存和分类，还支持一建运行整个集合内的测试
 - 每个请求看成一个Test Case，那么Collection则可以看成一个Test Suite
@@ -29,7 +25,7 @@
 - [Newmen](https://www.npmjs.com/package/newman)是一个命令行工具，可以让POSTman测试添加到持续集成系统中。
 
 
-## 4. Runner和外部数据
+## 3. Runner和外部数据
 - PostMan自带Runner功能，用于批量运行脚本，也就是可以运行整个Collection。
 - Runner运行时可以使用外部CSV文件，或者JSON文件来指定数据，实现数据驱动测试。
 > 示例：
@@ -45,7 +41,7 @@
 >  **注意**：Iterations 表示迭代几次，因为例子中只有两条数据，所以填写2。Delay表示每次之间间隔1000毫秒。
 >  ![CollectionRunner.png](https://www.z4a.net/images/2018/01/03/CollectionRunner.png)
 
-##  5. 测试（Tests）和自动化
+##  4. 测试（Tests）和自动化
 - 在Tests标签页里面，支持用户使用JS编写自己的测试脚本。
 - Tests标签页右侧snippets栏，里面是postman内置的测试脚本，辅助对接口进行测试。
 - 对于自动化测试，必须要设置Test脚本，不然即使run也没有意义。
@@ -59,3 +55,8 @@
 
 > 示例2：验证JSON格式
 > - 使用JSON Schema
+> 
+> **关于 JSON Schema**
+> - JSON Schema 是一种用于验证JSON格式的语法规则。
+> - [JSONSchema.net](https://jsonschema.net/#/) 在线生成JSON Schema的网页,输入期望的JSON数据，自动根据JSON数据格式分析出对应的JSON Schema。
+	
