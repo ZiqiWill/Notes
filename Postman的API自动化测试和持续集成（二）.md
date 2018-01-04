@@ -16,6 +16,6 @@
 > 官方地址：[Newman](https://www.npmjs.com/package/newman)
 
 ## 1. 安装
-- Newman基于 NodeJS，所需需要提前配置NodeJS环境。
-- > ensure that you have NodeJS >= v4. A copy of the NodeJS installable can be downloaded from https://nodejs.org/en/download/package-manager.
+	- Newman基于 NodeJS，所需需要提前配置NodeJS环境。
+	- ensure that you have NodeJS >= v4. A copy of the NodeJS installable can be downloaded from https://nodejs.org/en/download/package-manager.
 - 
