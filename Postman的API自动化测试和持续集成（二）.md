@@ -24,6 +24,7 @@
 
 - 打开控制台，运行： `npm install -g newman`
 - 校验Version，运行：`newman --version` 
+
 ![version.png](https://www.z4a.net/images/2018/01/04/version.png)
 
 ## 2. 执行脚本
