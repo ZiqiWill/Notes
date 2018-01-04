@@ -26,7 +26,7 @@
 - 校验Version，运行：`newman --version` ![version.png](https://www.z4a.net/images/2018/01/04/version.png)
 
 ## 2. 执行脚本
-> **脚本格式：**
+- 脚本格式：
 > 
 `newman run <collection-file-source> [options]`
 
@@ -39,4 +39,6 @@ newman run demo.postman_collection.json
 --reporter-html-export result.html
 
 ```
->
+
+- 命令行(cli)结果：
+![cliresult.png](https://www.z4a.net/images/2018/01/04/cliresult.png)
