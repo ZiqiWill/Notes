@@ -42,3 +42,7 @@ newman run demo.postman_collection.json
 
 - 命令行(cli)结果：
 ![cliresult.png](https://www.z4a.net/images/2018/01/04/cliresult.png)
+
+## 3. Jenkins 集成：
+- 构建选择Execute Windows batch command，输入上面的命令
+- 如果上面命令中需要生成Junit的xml测试报告，在构建后可以选择Publish JUnit test result report插件可以用来解析报告。
