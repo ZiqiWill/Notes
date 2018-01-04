@@ -16,6 +16,23 @@
 > 官方地址：[Newman](https://www.npmjs.com/package/newman)
 
 ## 1. 安装
-	- Newman基于 NodeJS，所需需要提前配置NodeJS环境。
+	- Newman基于 NodeJS，所以 需要提前配置好NodeJS环境。
 	- ensure that you have NodeJS >= v4. A copy of the NodeJS installable can be downloaded from https://nodejs.org/en/download/package-manager.
-- 
+- 打开控制台，运行： `npm install -g newman`
+- 校验Version，运行：`newman --version` ![version.png](https://www.z4a.net/images/2018/01/04/version.png)
+
+## 2. 执行脚本
+> 脚本格式：
+> 
+`newman run <collection-file-source> [options]`
+
+> 例如:
+>
+```
+newman run demo.postman_collection.json 
+--reporters cli,html 
+--environment dev.postman_environment.json 
+--reporter-html-export result.html
+
+```
+>
